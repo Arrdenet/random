@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Random Image</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  img {
+    width: auto;
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+<img id="randomImage" src="" alt="Random Image">
+<script>
+  fetch('YOUR_APPS_SCRIPT_WEB_APP_URL')
+    .then(response => response.text())
+    .then(imageUrl => {
+      document.getElementById('randomImage').src = imageUrl;
+    });
+</script>
+</body>
+</html>
